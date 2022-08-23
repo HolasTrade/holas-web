@@ -17,6 +17,8 @@ import CreatePageMain from './Create/Main'
 import ExplorePageMain from './Explore/Main'
 import HomePageMain from './Home/Main'
 import PageNotFound from './PageNotFound'
+import StrategyPage from './Strategy'
+import StrategyExamplePage from './Strategy/Example'
 
 function AppWrapper({ children }: { children: ReactNode }) {
   return <div className="flex flex-col justify-between w-screen min-h-screen">{children}</div>
@@ -45,6 +47,9 @@ function App() {
             </Route>
             <Route path="/explore" element={<ExplorePage />}>
               <Route index element={<ExplorePageMain />} />
+            </Route>
+            <Route path="/strategy/example" element={<StrategyPage />}>
+              <Route index element={<StrategyExamplePage />} />
             </Route>
           </Routes>
         </div>
