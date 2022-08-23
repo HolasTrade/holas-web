@@ -117,7 +117,9 @@ export default function ExampleStrategy() {
     })
     console.log(txApprove, txInitiate)
 
-    setShowConfetti(true)
+    if (txInitiate) {
+      setShowConfetti(true)
+    }
   }, [approveUSDT, initiateExec, chain, switchNetworkAsync, isLoadingSwitchChain, pendingChainId])
 
   const likeBtnClick = useCallback(() => {
@@ -178,6 +180,7 @@ export default function ExampleStrategy() {
         width={width}
         height={height}
         run={showConfetti}
+        recycle={false}
         onConfettiComplete={() => setShowConfetti(false)}
       />
     </>
