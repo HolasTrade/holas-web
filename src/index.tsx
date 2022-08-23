@@ -26,8 +26,9 @@ import { fantomChain, fantomTestnetChain } from './utils/rainbow-chains'
 
 const { chains, provider } = configureChains(
   [
+    chain.goerli, // first network is the default network ==> Goerli for us atm.
     chain.mainnet, chain.optimism, chain.arbitrum, chain.polygon,
-    fantomChain, fantomTestnetChain, chain.goerli,
+    fantomChain, fantomTestnetChain,
   ],
   [
     // alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }),
